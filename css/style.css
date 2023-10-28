@@ -73,3 +73,30 @@ body {
     display: block;
     font-size: 1.25em;
 }
+
+@media (min-width: 600px) {
+    .card {
+        grid-template: auto auto 100px/auto auto 150px
+    }
+
+    .card-img {
+        grid-row: 1 / -1;
+        grid-column:1;
+        width: 100%; /** matches the cell we created for it */
+        height: 100%;
+    }
+    .card-title {
+        grid-row: 1;
+        grid-column: 2/-1;
+    }
+    .card-body {
+        grid-column: 2/-1;
+        grid-row:2;
+    }
+    .card-btn {
+        grid-row:3;
+    }
+    .card-read-time {
+        grid-row:3;
+    }
+}
